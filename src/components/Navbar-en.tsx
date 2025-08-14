@@ -1,21 +1,20 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useDarkMode } from "@/hooks/use-dark-mode";
-
 import { Moon, Sun, Menu, X, Globe } from "lucide-react";
 
-export const Navbar = () => {
+export const NavbarEn = () => {
   const { isDark, toggle } = useDarkMode();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "#about", label: "אודות" },
-    { href: "#services", label: "שירותים" },
-    { href: "#projects", label: "פרויקטים" },
-    { href: "#cases", label: "מקרים" },
-    { href: "#skills", label: "כישורים" },
-    { href: "#blog", label: "בלוג" },
-    { href: "#contact", label: "צור קשר" }
+    { href: "#about", label: "About" },
+    { href: "#services", label: "Services" },
+    { href: "#projects", label: "Projects" },
+    { href: "#cases", label: "Cases" },
+    { href: "#skills", label: "Skills" },
+    { href: "#blog", label: "Blog" },
+    { href: "#contact", label: "Contact" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -63,14 +62,14 @@ export const Navbar = () => {
           <div className="flex items-center gap-4">
             {/* Language Toggle */}
             <motion.a
-              href="/en"
+              href="/"
               className="p-2 rounded-xl bg-secondary/50 text-foreground hover:bg-secondary transition-colors duration-200 flex items-center gap-1"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              title="Switch to English"
+              title="עבור לעברית"
             >
               <Globe size={16} />
-              <span className="text-xs font-medium">EN</span>
+              <span className="text-xs font-medium">HE</span>
             </motion.a>
 
             {/* Theme Toggle */}
