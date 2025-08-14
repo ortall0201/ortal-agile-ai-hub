@@ -29,7 +29,7 @@ export const Projects = () => {
       description: "Omdena collaborative project developing AI-driven mental health support system",
       category: "AI/LLM",
       tags: ["AI", "Healthcare", "NLP"],
-      link: "#"
+      link: "https://github.com/OmdenaAI/agentic-based-Mental-Health-chatbot-using-Langchain-workflows/tree/team1"
     },
     {
       name: "OSINT Iran Dashboard",
