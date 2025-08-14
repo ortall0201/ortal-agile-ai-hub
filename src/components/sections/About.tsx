@@ -15,7 +15,17 @@ export const About = () => {
   return (
     <section id="about" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle>About Me</SectionTitle>
+        <div className="relative mb-16">
+          <SectionTitle>About Me</SectionTitle>
+          {/* AI Robot near title */}
+          <div className="absolute -top-4 -right-8 w-20 h-20 ai-robot">
+            <img 
+              src={aiRobotImage} 
+              alt="AI Robot" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -51,33 +61,22 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="relative">
-              {/* AI Robot */}
-              <div className="absolute -top-8 -right-8 w-24 h-24 ai-robot">
-                <img 
-                  src={aiRobotImage} 
-                  alt="AI Robot" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              
-              <GlowCard className="text-center about-floating-card">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gradient-accent mb-2">5+ Years</h3>
-                    <p className="text-muted-foreground">Project Management Experience</p>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gradient-accent mb-2">15+ Projects</h3>
-                    <p className="text-muted-foreground">Successfully Delivered</p>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gradient-accent mb-2">AI-First</h3>
-                    <p className="text-muted-foreground">Approach to Innovation</p>
-                  </div>
+            <GlowCard className="text-center about-floating-card">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">5+ Years</h3>
+                  <p className="text-muted-foreground">Project Management Experience</p>
                 </div>
-              </GlowCard>
-            </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">15+ Projects</h3>
+                  <p className="text-muted-foreground">Successfully Delivered</p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">AI-First</h3>
+                  <p className="text-muted-foreground">Approach to Innovation</p>
+                </div>
+              </div>
+            </GlowCard>
           </motion.div>
         </div>
       </div>
