@@ -45,7 +45,10 @@ export const Blog = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <GlowCard className="h-full flex flex-col group cursor-pointer">
+              <GlowCard 
+                className="h-full flex flex-col group cursor-pointer"
+                onClick={() => post.link !== "#" && window.open(post.link, '_blank')}
+              >
                 <div className="flex items-center justify-between mb-4">
                   <span className="chip text-xs">{post.category}</span>
                   {post.link !== "#" && (
