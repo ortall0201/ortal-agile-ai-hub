@@ -13,7 +13,7 @@ export const Skills = () => {
     },
     {
       title: "Operations",
-      skills: ["Docker", "CI/CD", "Cloud Platforms", "Monitoring"]
+      skills: ["Docker", "CI/CD", "Cloud Platforms", "Monitoring", "Render", "Hugging Face", "Streamlit", "Gradio", "DuckDB"]
     },
     {
       title: "Tools & Platforms",
