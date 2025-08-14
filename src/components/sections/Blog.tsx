@@ -6,8 +6,8 @@ import { Calendar, ExternalLink, ArrowRight } from "lucide-react";
 export const Blog = () => {
   const posts = [
     {
-      title: "AI Implemnter - Increasing DEV productivity using AI",
-      excerpt: "The transition to automation demonstrates the rapid change in the technology industry. How can organizations prepare for the AI future while preserving human capital and maximizing developer productivity?",
+      title: "מיישם AI - הגדלת פרודוקטיביות המפתחים באמצעות בינה מלאכותית",
+      excerpt: "המעבר לאוטומציה מדגים את השינוי המהיר בתעשיית הטכנולוגיה. כיצד ארגונים יכולים להתכונן לעתיד של AI תוך שמירה על הון האנושי והגדלת פרודוקטיביות המפתחים?",
       date: "ינואר 2025",
       readTime: "4 דקות קריאה",
       category: "אסטרטגיית AI",
