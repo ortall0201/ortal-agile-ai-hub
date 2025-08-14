@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useDarkMode } from "@/hooks/use-dark-mode";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { useLanguage } from "@/hooks/use-language";
+import { Moon, Sun, Menu, X, Globe } from "lucide-react";
 
 export const Navbar = () => {
   const { isDark, toggle } = useDarkMode();
+  const { language, toggleLanguage, isHebrew } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -60,8 +62,21 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Theme Toggle & Mobile Menu */}
+          {/* Controls */}
           <div className="flex items-center gap-4">
+            {/* Language Toggle */}
+            <motion.button
+              onClick={toggleLanguage}
+              className="p-2 rounded-xl bg-secondary/50 text-foreground hover:bg-secondary transition-colors duration-200 flex items-center gap-1"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              title={isHebrew ? "Switch to English" : "עבור לעברית"}
+            >
+              <Globe size={16} />
+              <span className="text-xs font-medium">{language.toUpperCase()}</span>
+            </motion.button>
+
+            {/* Theme Toggle */}
             <motion.button
               onClick={toggle}
               className="p-2 rounded-xl bg-secondary/50 text-foreground hover:bg-secondary transition-colors duration-200"
