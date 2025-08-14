@@ -12,45 +12,45 @@ export const Projects = () => {
   const projects = [
     {
       name: "RunMyDocker",
-      description: "Cloud-based Docker container management platform for seamless deployment and scaling",
-      category: "Ops",
+      description: "פלטפורמת ניהול קונטיינרים של Docker מבוססת ענן לפריסה וקנה מידה חלקים",
+      category: "תפעול",
       tags: ["Docker", "Cloud", "DevOps"],
       link: "https://runmydocker.com"
     },
     {
       name: "DBooster",
-      description: "AI-powered SQL query optimization and database performance enhancement tool",
+      description: "כלי אופטימיזציה של שאילתות SQL מונחה AI ושיפור ביצועי מסד נתונים",
       category: "AI/LLM",
       tags: ["AI", "SQL", "Database"],
       link: "#"
     },
     {
-      name: "Mental Health Chatbot",
-      description: "Omdena collaborative project developing AI-driven mental health support system",
+      name: "צ'אטבוט לבריאות הנפש",
+      description: "פרויקט שיתופי של Omdena לפיתוח מערכת תמיכה בבריאות הנפש מונחית AI",
       category: "AI/LLM",
       tags: ["AI", "Healthcare", "NLP"],
       link: "https://github.com/OmdenaAI/agentic-based-Mental-Health-chatbot-using-Langchain-workflows/tree/team1"
     },
     {
-      name: "OSINT Iran Dashboard",
-      description: "Open-source intelligence dashboard for monitoring and analyzing Iranian digital landscape",
-      category: "Project",
+      name: "לוח מחוונים OSINT איראן",
+      description: "לוח מחוונים מודיעין קוד פתוח לניטור וניתוח הנוף הדיגיטלי האיראני",
+      category: "פרויקט",
       tags: ["OSINT", "Analytics", "Monitoring"],
       link: "https://huggingface.co/spaces/ortal12345/iran-trends-tracker"
     },
     {
       name: "docs-translator",
-      description: "Automated documentation translation system supporting multiple languages and formats",
+      description: "מערכת תרגום אוטומטי לדוקומנטציה התומכת במספר שפות ופורמטים",
       category: "AI/LLM",
       tags: ["Translation", "AI", "Documentation"],
       link: "https://docs-translator.onrender.com/"
     }
   ];
 
-  const filters = ["All", "AI/LLM", "Project", "Ops"];
+  const filters = ["הכל", "AI/LLM", "פרויקט", "תפעול"];
 
   const filteredProjects = projects.filter(project => {
-    const matchesFilter = filter === "All" || project.category === filter;
+    const matchesFilter = filter === "הכל" || project.category === filter;
     const matchesSearch = project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
@@ -59,7 +59,7 @@ export const Projects = () => {
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle>Projects</SectionTitle>
+        <SectionTitle>פרויקטים</SectionTitle>
         
         {/* Filters and Search */}
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -83,7 +83,7 @@ export const Projects = () => {
             <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search projects..."
+              placeholder="חפש פרויקטים..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="input-glass pl-10"
@@ -141,7 +141,7 @@ export const Projects = () => {
             href="https://www.linkedin.com/in/ortal-lasry-3232252b6/details/projects/"
           >
             <ExternalLink size={20} />
-            LinkedIn Projects ↗
+            פרויקטים ב-LinkedIn ↗
           </GradientButton>
         </div>
       </div>

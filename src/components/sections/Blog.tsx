@@ -14,18 +14,18 @@ export const Blog = () => {
       link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_%D7%90%D7%9E%D7%93%D7%95%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%9E%D7%94-%D7%97%D7%98%D7%99%D7%91%D7%AA-ai-%D7%97%D7%93%D7%A9%D7%94-%D7%95%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A4%D7%98%D7%A8-%D7%9E%D7%90%D7%95%D7%AA-activity-7361377935032745984-q8ms?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvZ_YsB1emDVodDot_p58xC2mKHxpGR46o"
     },
     {
-      title: "Implementing Agile AI: Beyond Traditional Project Management",
-      excerpt: "Real-world strategies for integrating AI development into Agile frameworks, ensuring rapid iteration while maintaining quality and ethical standards.",
-      date: "December 2024",
-      readTime: "6 min read",
+      title: "יישום Agile AI: מעבר לניהול פרויקטים מסורתי",
+      excerpt: "אסטרטגיות מהעולם האמיתי לשילוב פיתוח AI במסגרות Agile, הבטחת איטרציה מהירה תוך שמירה על איכות וסטנדרטים אתיים.",
+      date: "דצמבר 2024",
+      readTime: "6 דקות קריאה",
       category: "Agile & AI",
       link: "#"
     },
     {
-      title: "MVP to Market: Scaling AI Solutions",
-      excerpt: "Lessons learned from leading technical teams through AI project lifecycle - from proof of concept to production deployment at enterprise scale.",
-      date: "November 2024",
-      readTime: "5 min read",
+      title: "מ-MVP לשוק: הרחבת פתרונות AI",
+      excerpt: "לקחים שנלמדו מהובלת צוותים טכניים במחזור חיי פרויקטי AI - מהוכחת קונספט לפריסה בייצור בקנה מידה ארגוני.",
+      date: "נובמבר 2024",
+      readTime: "5 דקות קריאה",
       category: "Product Management",
       link: "#"
     }
@@ -34,7 +34,7 @@ export const Blog = () => {
   return (
     <section id="blog" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle>Latest Insights</SectionTitle>
+        <SectionTitle>תובנות אחרונות</SectionTitle>
         
         <div className="grid md:grid-cols-3 gap-6">
           {posts.map((post, index) => (
@@ -76,7 +76,7 @@ export const Blog = () => {
                   className="flex items-center gap-2 text-primary text-sm font-medium mt-4 opacity-0 group-hover:opacity-100 transition-opacity"
                   whileHover={{ x: 5 }}
                 >
-                  <span>Read more</span>
+                  <span>קרא עוד</span>
                   <ArrowRight size={14} />
                 </motion.div>
               </GlowCard>

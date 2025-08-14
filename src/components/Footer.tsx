@@ -17,8 +17,8 @@ export const Footer = () => {
           >
             <h3 className="text-xl font-bold text-gradient mb-4">Ortal Lasry</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Technical Project Manager specializing in Agile methodologies and AI-oriented solutions. 
-              Bridging the gap between innovation and execution.
+              מנהלת פרויקטים טכנית המתמחה במתודולוגיות Agile ופתרונות מונחי AI. 
+              מגשרת בין חדשנות לביצוע.
             </p>
           </motion.div>
 
@@ -29,13 +29,13 @@ export const Footer = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-foreground mb-4">קישורים מהירים</h4>
             <div className="space-y-2">
               {[
-                { href: "#about", label: "About" },
-                { href: "#services", label: "Services" },
-                { href: "#projects", label: "Projects" },
-                { href: "#contact", label: "Contact" }
+                { href: "#about", label: "אודות" },
+                { href: "#services", label: "שירותים" },
+                { href: "#projects", label: "פרויקטים" },
+                { href: "#contact", label: "צור קשר" }
               ].map((link) => (
                 <button
                   key={link.href}
@@ -55,7 +55,7 @@ export const Footer = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-semibold text-foreground mb-4">Connect</h4>
+            <h4 className="font-semibold text-foreground mb-4">התחבר</h4>
             <div className="space-y-3">
               <motion.a
                 href="https://www.linkedin.com/in/ortal-lasry-3232252b6"
@@ -83,7 +83,7 @@ export const Footer = () => {
                 whileHover={{ x: 5 }}
               >
                 <Mail size={18} />
-                <span className="text-sm">Email</span>
+                <span className="text-sm">אימייל</span>
               </motion.a>
             </div>
           </motion.div>
@@ -98,10 +98,10 @@ export const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-muted-foreground text-sm flex items-center gap-2">
-            © {currentYear} Ortal Lasry. Made with <Heart size={14} className="text-red-500" /> and modern tech.
+            © {currentYear} אורטל לסרי. נבנה עם <Heart size={14} className="text-red-500" /> וטכנולוגיה מתקדמת.
           </p>
           <p className="text-muted-foreground text-xs">
-            Built with React, TypeScript & Framer Motion
+            נבנה עם React, TypeScript ו-Framer Motion
           </p>
         </motion.div>
       </div>

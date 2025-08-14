@@ -6,23 +6,23 @@ import { TrendingUp, Users, Clock } from "lucide-react";
 export const CaseStudies = () => {
   const caseStudies = [
     {
-      title: "AI-Powered Customer Service Platform",
-      client: "Tech Startup",
+      title: "פלטפורמת שירות לקוחות מונחית AI",
+      client: "סטארט-אפ טכנולוגי",
       icon: TrendingUp,
       points: [
-        "Reduced customer response time by 75% through intelligent routing",
-        "Achieved 94% customer satisfaction score within 3 months",
-        "Implemented Agile sprints resulting in 40% faster feature delivery"
+        "הקטנת זמן מענה ללקוחות ב-75% באמצעות ניתוב חכם",
+        "השגת ציון שביעות רצון לקוחות של 94% תוך 3 חודשים",
+        "יישום ספרינטים של Agile שהביא למסירת פיצ'רים מהירה יותר ב-40%"
       ]
     },
     {
-      title: "Cross-Platform DevOps Migration",
-      client: "Enterprise Client",
+      title: "מיגרציית DevOps חוצת פלטפורמות",
+      client: "לקוח ארגוני",
       icon: Users,
       points: [
-        "Led team of 12 developers through complex infrastructure migration",
-        "Decreased deployment time from 4 hours to 15 minutes",
-        "Established CI/CD pipeline reducing production bugs by 60%"
+        "הובלת צוות של 12 מפתחים במיגרציית תשתית מורכבת",
+        "הקטנת זמן פריסה מ-4 שעות ל-15 דקות",
+        "הקמת צינור CI/CD שהפחית באגים בייצור ב-60%"
       ]
     }
   ];
@@ -30,7 +30,7 @@ export const CaseStudies = () => {
   return (
     <section id="cases" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle>Case Studies</SectionTitle>
+        <SectionTitle>מקרי בוחן</SectionTitle>
         
         <div className="grid lg:grid-cols-2 gap-8">
           {caseStudies.map((study, index) => (

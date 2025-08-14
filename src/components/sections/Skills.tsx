@@ -24,7 +24,7 @@ export const Skills = () => {
   return (
     <section id="skills" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle>Skills & Expertise</SectionTitle>
+        <SectionTitle>כישורים ומומחיות</SectionTitle>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, categoryIndex) => (

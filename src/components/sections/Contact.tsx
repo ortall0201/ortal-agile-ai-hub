@@ -5,11 +5,9 @@ import { GlowCard } from "@/components/ui/glow-card";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { Mail, Linkedin, Send, CheckCircle, AlertCircle, BarChart3 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useLanguage } from "@/hooks/use-language";
+
 
 export const Contact = () => {
-  const { isHebrew } = useLanguage();
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,8 +35,8 @@ export const Contact = () => {
 
       if (response.ok) {
         toast({
-          title: "Message sent successfully!",
-          description: "I'll get back to you within 24 hours.",
+          title: "ההודעה נשלחה בהצלחה!",
+          description: "אחזור אליך תוך 24 שעות.",
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
@@ -50,8 +48,8 @@ export const Contact = () => {
       window.location.href = mailtoLink;
       
       toast({
-        title: "Redirecting to email client",
-        description: "Please send the email to complete your message.",
+        title: "מפנה לאפליקציית האימייל",
+        description: "אנא שלח את האימייל כדי להשלים את ההודעה שלך.",
       });
       
       setFormData({ name: "", email: "", message: "" });
@@ -70,7 +68,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <SectionTitle>{isHebrew ? "צור קשר" : "Let's Connect"}</SectionTitle>
+        <SectionTitle>צור קשר</SectionTitle>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -81,12 +79,12 @@ export const Contact = () => {
             viewport={{ once: true }}
           >
             <GlowCard>
-              <h3 className="text-xl font-bold text-foreground mb-6">{isHebrew ? "שיחת היכרות" : "Get in Touch"}</h3>
+              <h3 className="text-xl font-bold text-foreground mb-6">שיחת היכרות</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    {isHebrew ? "שם *" : "Name *"}
+                    שם *
                   </label>
                   <input
                     type="text"
@@ -96,13 +94,13 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="input-glass"
-                    placeholder={isHebrew ? "השם המלא שלך" : "Your full name"}
+                    placeholder="השם המלא שלך"
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    {isHebrew ? "אימייל *" : "Email *"}
+                    אימייל *
                   </label>
                   <input
                     type="email"
@@ -118,7 +116,7 @@ export const Contact = () => {
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    {isHebrew ? "הודעה *" : "Message *"}
+                    הודעה *
                   </label>
                   <textarea
                     id="message"
@@ -128,7 +126,7 @@ export const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="input-glass resize-none"
-                    placeholder={isHebrew ? "ספר לי על הפרויקט שלך או איך אני יכולה לעזור..." : "Tell me about your project or how I can help..."}
+                    placeholder="ספר לי על הפרויקט שלך או איך אני יכולה לעזור..."
                   />
                 </div>
                 
@@ -140,12 +138,12 @@ export const Contact = () => {
                   {isSubmitting ? (
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      {isHebrew ? "שולח..." : "Sending..."}
+                      שולח...
                     </div>
                   ) : (
                     <div className="flex items-center gap-2">
                       <Send size={18} />
-                      {isHebrew ? "שלח הודעה" : "Send Message"}
+                      שלח הודעה
                     </div>
                   )}
                 </GradientButton>
@@ -162,7 +160,7 @@ export const Contact = () => {
             className="space-y-6"
           >
             <GlowCard>
-              <h3 className="text-xl font-bold text-foreground mb-6">{isHebrew ? "צור קשר" : "Get in Touch"}</h3>
+              <h3 className="text-xl font-bold text-foreground mb-6">צור קשר</h3>
               
               <div className="space-y-4">
                 <motion.a
@@ -173,7 +171,7 @@ export const Contact = () => {
                   <Mail className="text-primary" size={24} />
                   <div>
                     <p className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {isHebrew ? "שלח אימייל" : "Email Me"}
+                      שלח אימייל
                     </p>
                     <p className="text-muted-foreground text-sm">ortalgr@gmail.com</p>
                   </div>
@@ -189,9 +187,9 @@ export const Contact = () => {
                   <Linkedin className="text-accent" size={24} />
                   <div>
                     <p className="font-semibold text-foreground group-hover:text-accent transition-colors">
-                      {isHebrew ? "התחבר ב-LinkedIn" : "Connect on LinkedIn"}
+                      התחבר ב-LinkedIn
                     </p>
-                    <p className="text-muted-foreground text-sm">{isHebrew ? "רשת מקצועית" : "Professional networking"}</p>
+                    <p className="text-muted-foreground text-sm">רשת מקצועית</p>
                   </div>
                 </motion.a>
                 
@@ -207,26 +205,26 @@ export const Contact = () => {
                     <p className="font-semibold text-foreground group-hover:text-secondary transition-colors">
                       Tableau Public
                     </p>
-                    <p className="text-muted-foreground text-sm">{isHebrew ? "ויזואליזציה של נתונים ולוחות מחוונים" : "Data visualizations & dashboards"}</p>
+                    <p className="text-muted-foreground text-sm">ויזואליזציה של נתונים ולוחות מחוונים</p>
                   </div>
                 </motion.a>
               </div>
             </GlowCard>
             
             <GlowCard>
-              <h4 className="font-bold text-foreground mb-4">{isHebrew ? "הבטחת מענה מהיר" : "Quick Response Promise"}</h4>
+              <h4 className="font-bold text-foreground mb-4">הבטחת מענה מהיר</h4>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <CheckCircle size={16} className="text-primary" />
-                  <span>{isHebrew ? "מענה ראשוני תוך 24 שעות" : "Initial response within 24 hours"}</span>
+                  <span>מענה ראשוני תוך 24 שעות</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle size={16} className="text-primary" />
-                  <span>{isHebrew ? "שיחת ייעוץ חינמית של 30 דקות" : "Free 30-minute consultation call"}</span>
+                  <span>שיחת ייעוץ חינמית של 30 דקות</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle size={16} className="text-primary" />
-                  <span>{isHebrew ? "הצעת פרויקט מותאמת" : "Tailored project proposal"}</span>
+                  <span>הצעת פרויקט מותאמת</span>
                 </div>
               </div>
             </GlowCard>

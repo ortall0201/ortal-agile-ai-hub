@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { Github, Linkedin, ExternalLink } from "lucide-react";
-import { useLanguage } from "@/hooks/use-language";
+
 
 export const Hero = () => {
-  const { isHebrew } = useLanguage();
-  
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6 py-20">
       <motion.div
@@ -33,7 +31,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          {isHebrew ? "מנהלת פרויקטים טכנית | Agile & AI-Oriented" : "Technical Project Manager | Agile & AI-Oriented"}
+          מנהלת פרויקטים טכנית | Agile & AI-Oriented
         </motion.p>
 
         <motion.div
@@ -47,7 +45,7 @@ export const Hero = () => {
             size="lg"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            {isHebrew ? "שיחת היכרות" : "Get in Touch"}
+            שיחת היכרות
           </GradientButton>
           
           <GradientButton
@@ -56,7 +54,7 @@ export const Hero = () => {
             href="https://linktr.ee/Ortal_Lasry"
           >
             <ExternalLink size={20} />
-            {isHebrew ? "הורדת קו״ח" : "Download CV"}
+            הורדת קו״ח
           </GradientButton>
         </motion.div>
 

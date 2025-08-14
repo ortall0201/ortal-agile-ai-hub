@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useDarkMode } from "@/hooks/use-dark-mode";
-import { useLanguage } from "@/hooks/use-language";
-import { Moon, Sun, Menu, X, Globe } from "lucide-react";
+
+import { Moon, Sun, Menu, X } from "lucide-react";
 
 export const Navbar = () => {
   const { isDark, toggle } = useDarkMode();
-  const { language, toggleLanguage, isHebrew } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = isHebrew ? [
+  const navItems = [
     { href: "#about", label: "אודות" },
     { href: "#services", label: "שירותים" },
     { href: "#projects", label: "פרויקטים" },
@@ -17,14 +16,6 @@ export const Navbar = () => {
     { href: "#skills", label: "כישורים" },
     { href: "#blog", label: "בלוג" },
     { href: "#contact", label: "צור קשר" }
-  ] : [
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#projects", label: "Projects" },
-    { href: "#cases", label: "Cases" },
-    { href: "#skills", label: "Skills" },
-    { href: "#blog", label: "Blog" },
-    { href: "#contact", label: "Contact" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -70,17 +61,6 @@ export const Navbar = () => {
 
           {/* Controls */}
           <div className="flex items-center gap-4">
-            {/* Language Toggle */}
-            <motion.button
-              onClick={toggleLanguage}
-              className="p-2 rounded-xl bg-secondary/50 text-foreground hover:bg-secondary transition-colors duration-200 flex items-center gap-1"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              title={isHebrew ? "Switch to English" : "עבור לעברית"}
-            >
-              <Globe size={16} />
-              <span className="text-xs font-medium">{isHebrew ? 'EN' : 'HE'}</span>
-            </motion.button>
 
             {/* Theme Toggle */}
             <motion.button
