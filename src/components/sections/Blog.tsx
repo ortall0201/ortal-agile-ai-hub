@@ -23,11 +23,11 @@ export const Blog = () => {
     },
     {
       title: "מ-MVP לשוק: הרחבת פתרונות AI",
-      excerpt: "לקחים שנלמדו מהובלת צוותים טכניים במחזור חיי פרויקטי AI - מהוכחת קונספט לפריסה בייצור בקנה מידה ארגוני.",
+      excerpt: "השלמת תוכנית Omdena לפיתוח פתרונות AI למטרות חברתיות - מפרויקט לאב לפתרון אמיתי שמשפיע על קהילות ברחבי העולם.",
       date: "נובמבר 2024",
       readTime: "5 דקות קריאה",
       category: "Product Management",
-      link: "#"
+      link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_omdena-certificate-of-completion-activity-7330220714601459714-Q_D3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvZ_YsB1emDVodDot_p58xC2mKHxpGR46o"
     }
   ];
 
