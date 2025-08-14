@@ -36,7 +36,7 @@ export const Projects = () => {
       description: "Open-source intelligence dashboard for monitoring and analyzing Iranian digital landscape",
       category: "Project",
       tags: ["OSINT", "Analytics", "Monitoring"],
-      link: "#"
+      link: "https://huggingface.co/spaces/ortal12345/iran-trends-tracker"
     },
     {
       name: "docs-translator",
