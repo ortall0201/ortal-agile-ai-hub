@@ -21,16 +21,13 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Attempt to submit to Notion API
-      const response = await fetch('/api/notion-intake', {
+      // Send email using Supabase edge function
+      const response = await fetch('https://bamptcmcktncnkkffgoj.supabase.co/functions/v1/send-contact-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          source: 'website'
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
