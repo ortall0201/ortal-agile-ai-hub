@@ -14,8 +14,8 @@ export const Blog = () => {
       link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_%D7%90%D7%9E%D7%93%D7%95%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%9E%D7%94-%D7%97%D7%98%D7%99%D7%91%D7%AA-ai-%D7%97%D7%93%D7%A9%D7%94-%D7%95%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A4%D7%98%D7%A8-%D7%9E%D7%90%D7%95%D7%AA-activity-7361377935032745984-q8ms?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvZ_YsB1emDVodDot_p58xC2mKHxpGR46o"
     },
     {
-      title: "Run My Docker - פלטפורמת ניהול קונטיינרים מתקדמת",
-      excerpt: "הצגת פלטפורמה חדשנית לניהול Docker containers בענן, המאפשרת פריסה קלה וקנה מידה חלק לפרויקטים מורכבים.",
+      title: "אזהרת טריגר למפתחים - כיצד בניתי אפליקציה ביום אחד באמצעות קלוד קוד והצגת פלטפורמת ניהול קונטיינרים חדשה",
+      excerpt: "סיפור מהיר על איך הצלחתי לבנות פלטפורמה מלאה לניהול Docker containers תוך יום אחד בלבד, באמצעות כלי AI מתקדמים ושיטות פיתוח חדשניות.",
       date: "דצמבר 2024",
       readTime: "5 דקות קריאה",
       category: "DevOps & Cloud",
