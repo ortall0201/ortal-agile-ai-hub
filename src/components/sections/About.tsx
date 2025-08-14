@@ -3,9 +3,17 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { GlowCard } from "@/components/ui/glow-card";
 import { CheckCircle } from "lucide-react";
 import aiRobotImage from "@/assets/ai-robot-advanced.png";
+import { useLanguage } from "@/hooks/use-language";
 
 export const About = () => {
-  const highlights = [
+  const { isHebrew } = useLanguage();
+  
+  const highlights = isHebrew ? [
+    "הובלתי פרויקטי MVP מרעיון ועד ייצור ומעבר לו",
+    "מומחית במתודולוגיות Agile והובלת צוותים רב-תחומיים",
+    "התמחות באינטגרציה של AI/GenAI ותהליכי אוטומציה",
+    "רקורד מוכח בקבלת החלטות מונחות נתונים"
+  ] : [
     "led MVP projects from concept to production and beyond",
     "Expert in Agile methodologies and cross-functional team leadership",
     "Specialized in AI/GenAI integration and automation workflows",
@@ -16,7 +24,7 @@ export const About = () => {
     <section id="about" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="relative mb-16">
-          <SectionTitle>About Me</SectionTitle>
+          <SectionTitle>{isHebrew ? "אודות" : "About Me"}</SectionTitle>
           {/* AI Robot near title */}
           <div className="absolute -top-2 -right-4 w-32 h-32 ai-robot">
             <img 
@@ -35,7 +43,10 @@ export const About = () => {
             viewport={{ once: true }}
           >
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I bridge the gap between development teams and AI innovation, specializing in transforming complex technical concepts into actionable project roadmaps. My expertise lies in rapidly delivering POCs to production-ready MVPs while ensuring seamless integration of cutting-edge AI technologies.
+              {isHebrew 
+                ? "אני מגשרת בין צוותי פיתוח לחדשנות AI, מתמחה בהפיכת קונספטים טכניים מורכבים למפות דרכים פעילות לפרויקטים. המומחיות שלי טמונה במתן POCs במהירות לMVPs מוכנים לייצור תוך הבטחת אינטגרציה חלקה של טכנולוגיות AI מתקדמות."
+                : "I bridge the gap between development teams and AI innovation, specializing in transforming complex technical concepts into actionable project roadmaps. My expertise lies in rapidly delivering POCs to production-ready MVPs while ensuring seamless integration of cutting-edge AI technologies."
+              }
             </p>
             
             <div className="space-y-4">
@@ -64,16 +75,16 @@ export const About = () => {
             <GlowCard className="text-center about-floating-card">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">5+ Years</h3>
-                  <p className="text-muted-foreground">Project Management Experience</p>
+                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">{isHebrew ? "5+ שנים" : "5+ Years"}</h3>
+                  <p className="text-muted-foreground">{isHebrew ? "ניסיון בניהול פרויקטים" : "Project Management Experience"}</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">15+ Projects</h3>
-                  <p className="text-muted-foreground">Successfully Delivered</p>
+                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">{isHebrew ? "15+ פרויקטים" : "15+ Projects"}</h3>
+                  <p className="text-muted-foreground">{isHebrew ? "נמסרו בהצלחה" : "Successfully Delivered"}</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">AI-First</h3>
-                  <p className="text-muted-foreground">Approach to Innovation</p>
+                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">{isHebrew ? "AI-First" : "AI-First"}</h3>
+                  <p className="text-muted-foreground">{isHebrew ? "גישה לחדשנות" : "Approach to Innovation"}</p>
                 </div>
               </div>
             </GlowCard>

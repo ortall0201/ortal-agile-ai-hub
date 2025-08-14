@@ -2,9 +2,31 @@ import { motion } from "framer-motion";
 import { SectionTitle } from "@/components/ui/section-title";
 import { GlowCard } from "@/components/ui/glow-card";
 import { Zap, Brain, BarChart3 } from "lucide-react";
+import { useLanguage } from "@/hooks/use-language";
 
 export const Services = () => {
-  const services = [
+  const { isHebrew } = useLanguage();
+  
+  const services = isHebrew ? [
+    {
+      icon: Zap,
+      title: "ניהול פרויקטים Agile",
+      description: "ניהול מחזור חיי פרויקט מקצה לקצה עם מתודולוגיות Scrum/Kanban, הבטחת מסירה מהירה ושיפור מתמיד.",
+      features: ["תכנון ספרינטים", "תיאום צוותים", "ניהול בעלי עניין", "הפחתת סיכונים"]
+    },
+    {
+      icon: Brain,
+      title: "GenAI וחדשנות",
+      description: "יישום אסטרטגי של טכנולוגיות AI, מהוכחת קונספט לפריסה בייצור, עם התמקדות בערך עסקי מעשי.",
+      features: ["אסטרטגיית AI", "אינטגרציית LLM", "תהליכי אוטומציה", "מעבדות חדשנות"]
+    },
+    {
+      icon: BarChart3,
+      title: "נתונים ומדדים",
+      description: "קבלת החלטות מונחת נתונים באמצעות אנליטיקה מקיפה, מעקב KPI ומסגרות אופטימיזציה של ביצועים.",
+      features: ["פיתוח KPI", "אנליטיקת ביצועים", "אופטימיזציה של תהליכים", "מודיעין עסקי"]
+    }
+  ] : [
     {
       icon: Zap,
       title: "Agile Project Management",
@@ -28,7 +50,7 @@ export const Services = () => {
   return (
     <section id="services" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle>Services</SectionTitle>
+        <SectionTitle>{isHebrew ? "שירותים" : "Services"}</SectionTitle>
         
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
