@@ -27,6 +27,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Received contact form submission:", { name, email, messageLength: message.length });
 
     // Send email to you (ortalgr@gmail.com)
+    console.log("Attempting to send email to ortalgr@gmail.com...");
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: ["ortalgr@gmail.com"],
@@ -44,10 +45,16 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email response:", emailResponse);
+    
+    if (emailResponse.error) {
+      console.error("Resend API error:", emailResponse.error);
+      throw new Error(`Email sending failed: ${emailResponse.error.message}`);
+    }
 
     // Send confirmation email to the sender
-    await resend.emails.send({
+    console.log("Attempting to send confirmation email to:", email);
+    const confirmationResponse = await resend.emails.send({
       from: "Ortal <onboarding@resend.dev>",
       to: [email],
       subject: "Thank you for your message!",
@@ -61,6 +68,13 @@ const handler = async (req: Request): Promise<Response> => {
         <p>Best regards,<br>Ortal</p>
       `,
     });
+
+    console.log("Confirmation email response:", confirmationResponse);
+    
+    if (confirmationResponse.error) {
+      console.error("Confirmation email error:", confirmationResponse.error);
+      // Don't throw here as the main email might have worked
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
