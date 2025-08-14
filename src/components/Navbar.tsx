@@ -9,13 +9,20 @@ export const Navbar = () => {
   const { language, toggleLanguage, isHebrew } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
+  const navItems = isHebrew ? [
+    { href: "#about", label: "אודות" },
+    { href: "#services", label: "שירותים" },
+    { href: "#projects", label: "פרויקטים" },
+    { href: "#cases", label: "מקרים" },
+    { href: "#skills", label: "כישורים" },
+    { href: "#blog", label: "בלוג" },
+    { href: "#contact", label: "צור קשר" }
+  ] : [
     { href: "#about", label: "About" },
     { href: "#services", label: "Services" },
     { href: "#projects", label: "Projects" },
     { href: "#cases", label: "Cases" },
     { href: "#skills", label: "Skills" },
-    { href: "#testimonials", label: "Testimonials" },
     { href: "#blog", label: "Blog" },
     { href: "#contact", label: "Contact" }
   ];
