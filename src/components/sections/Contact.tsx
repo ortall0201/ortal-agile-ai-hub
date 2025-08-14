@@ -192,22 +192,6 @@ export const Contact = () => {
                     <p className="text-muted-foreground text-sm">רשת מקצועית</p>
                   </div>
                 </motion.a>
-                
-                <motion.a
-                  href="https://public.tableau.com/app/profile/ortal.lasry"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-200 group"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <BarChart3 className="text-secondary" size={24} />
-                  <div>
-                    <p className="font-semibold text-foreground group-hover:text-secondary transition-colors">
-                      Tableau Public
-                    </p>
-                    <p className="text-muted-foreground text-sm">ויזואליזציה של נתונים ולוחות מחוונים</p>
-                  </div>
-                </motion.a>
               </div>
             </GlowCard>
             
