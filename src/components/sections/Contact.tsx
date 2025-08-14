@@ -18,9 +18,11 @@ export const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submission started", formData);
     setIsSubmitting(true);
 
     try {
+      console.log("Attempting to send email...");
       // Send email using Supabase edge function
       const response = await fetch('https://bamptcmcktncnkkffgoj.supabase.co/functions/v1/send-contact-email', {
         method: 'POST',
@@ -30,27 +32,28 @@ export const Contact = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log("Response received:", response.status, response.statusText);
+
       if (response.ok) {
+        console.log("Email sent successfully!");
         toast({
           title: "ההודעה נשלחה בהצלחה!",
           description: "אחזור אליך תוך 24 שעות.",
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
-        throw new Error('API submission failed');
+        console.error("Email sending failed:", response.status, response.statusText);
+        throw new Error('Email sending failed');
       }
     } catch (error) {
-      // Fallback to mailto
-      const mailtoLink = `mailto:ortalgr@gmail.com?subject=Website Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;
-      window.location.href = mailtoLink;
-      
+      console.error('Error sending email:', error);
       toast({
-        title: "מפנה לאפליקציית האימייל",
-        description: "אנא שלח את האימייל כדי להשלים את ההודעה שלך.",
+        title: "שגיאה בשליחת ההודעה",
+        description: "אנא נסה שוב או שלח אימייל ישירות.",
+        variant: "destructive",
       });
-      
-      setFormData({ name: "", email: "", message: "" });
     } finally {
+      console.log("Form submission completed");
       setIsSubmitting(false);
     }
   };
@@ -127,11 +130,18 @@ export const Contact = () => {
                   />
                 </div>
                 
-                <GradientButton
-                  variant="filled"
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
                   className="w-full"
-                  onClick={() => {}}
+                  onClick={() => {
+                    console.log("Send button clicked!");
+                  }}
                 >
+                  <GradientButton
+                    variant="filled"
+                    className="w-full"
+                  >
                   {isSubmitting ? (
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -143,7 +153,8 @@ export const Contact = () => {
                       שלח הודעה
                     </div>
                   )}
-                </GradientButton>
+                  </GradientButton>
+                </button>
               </form>
             </GlowCard>
           </motion.div>
