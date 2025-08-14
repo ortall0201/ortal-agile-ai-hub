@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover: 240 8% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 250 100% 65%;
+    --primary: 250 100% 70%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 240 6% 12%;
@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 240 6% 12%;
     --muted-foreground: 215.4 16.3% 65%;
 
-    --accent: 280 100% 70%;
+    --accent: 285 100% 75%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,35 +35,43 @@ All colors MUST be HSL.
 
     --border: 240 6% 15%;
     --input: 240 6% 15%;
-    --ring: 250 100% 65%;
+    --ring: 250 100% 70%;
 
     --radius: 1.5rem;
 
-    /* Aurora Gradient Colors */
-    --aurora-primary: 250 100% 65%;
-    --aurora-secondary: 280 100% 70%;
-    --aurora-tertiary: 200 100% 60%;
-    --aurora-quaternary: 320 100% 75%;
+    /* Enhanced Aurora Gradient Colors for Professional Look */
+    --aurora-primary: 250 100% 70%;      /* Vibrant Purple */
+    --aurora-secondary: 285 100% 75%;    /* Bright Magenta */
+    --aurora-tertiary: 200 100% 65%;     /* Cyan Blue */
+    --aurora-quaternary: 45 100% 70%;    /* Golden Yellow */
+    --aurora-emerald: 165 100% 65%;      /* Emerald Green */
+    --aurora-rose: 340 100% 75%;         /* Rose Pink */
 
-    /* Glass Panel */
-    --glass-bg: 240 8% 8% / 0.8;
-    --glass-border: 240 20% 30% / 0.3;
-    --glass-glow: 250 100% 65% / 0.1;
+    /* Enhanced Glass Panel with More Sophistication */
+    --glass-bg: 240 8% 8% / 0.85;
+    --glass-border: 250 50% 50% / 0.3;
+    --glass-glow: 250 100% 70% / 0.15;
 
-    /* Text Gradients */
-    --text-gradient: linear-gradient(135deg, hsl(var(--aurora-primary)), hsl(var(--aurora-secondary)));
-    --text-gradient-accent: linear-gradient(135deg, hsl(var(--aurora-secondary)), hsl(var(--aurora-tertiary)));
+    /* Dynamic Text Gradients */
+    --text-gradient: linear-gradient(135deg, hsl(var(--aurora-primary)), hsl(var(--aurora-secondary)), hsl(var(--aurora-tertiary)));
+    --text-gradient-accent: linear-gradient(135deg, hsl(var(--aurora-secondary)), hsl(var(--aurora-emerald)), hsl(var(--aurora-quaternary)));
+    --text-gradient-success: linear-gradient(135deg, hsl(var(--aurora-emerald)), hsl(var(--aurora-tertiary)));
+    --text-gradient-warm: linear-gradient(135deg, hsl(var(--aurora-rose)), hsl(var(--aurora-quaternary)));
 
-    /* Aurora Background */
-    --aurora-bg: radial-gradient(ellipse 800px 600px at 50% 20%, hsl(var(--aurora-primary) / 0.1), transparent),
-                 radial-gradient(ellipse 600px 400px at 80% 60%, hsl(var(--aurora-secondary) / 0.08), transparent),
-                 radial-gradient(ellipse 700px 500px at 20% 80%, hsl(var(--aurora-tertiary) / 0.06), transparent),
-                 radial-gradient(ellipse 900px 700px at 90% 10%, hsl(var(--aurora-quaternary) / 0.04), transparent);
+    /* Enhanced Aurora Background with More Layers */
+    --aurora-bg: 
+                 radial-gradient(ellipse 1000px 800px at 50% 0%, hsl(var(--aurora-primary) / 0.12), transparent),
+                 radial-gradient(ellipse 800px 600px at 100% 50%, hsl(var(--aurora-secondary) / 0.10), transparent),
+                 radial-gradient(ellipse 600px 400px at 0% 80%, hsl(var(--aurora-tertiary) / 0.08), transparent),
+                 radial-gradient(ellipse 700px 500px at 80% 20%, hsl(var(--aurora-emerald) / 0.06), transparent),
+                 radial-gradient(ellipse 900px 700px at 20% 100%, hsl(var(--aurora-quaternary) / 0.04), transparent),
+                 radial-gradient(ellipse 500px 300px at 70% 70%, hsl(var(--aurora-rose) / 0.05), transparent);
 
-    /* Glow Effects */
-    --glow-primary: 0 0 40px hsl(var(--aurora-primary) / 0.3);
-    --glow-secondary: 0 0 40px hsl(var(--aurora-secondary) / 0.3);
-    --glow-hover: 0 0 60px hsl(var(--aurora-primary) / 0.4);
+    /* Enhanced Glow Effects */
+    --glow-primary: 0 0 50px hsl(var(--aurora-primary) / 0.4), 0 0 100px hsl(var(--aurora-primary) / 0.2);
+    --glow-secondary: 0 0 50px hsl(var(--aurora-secondary) / 0.4), 0 0 100px hsl(var(--aurora-secondary) / 0.2);
+    --glow-success: 0 0 50px hsl(var(--aurora-emerald) / 0.4), 0 0 100px hsl(var(--aurora-emerald) / 0.2);
+    --glow-hover: 0 0 80px hsl(var(--aurora-primary) / 0.5), 0 0 120px hsl(var(--aurora-secondary) / 0.3);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -117,34 +125,38 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Glass Panel Component */
+  /* Enhanced Glass Panel Component */
   .glass-panel {
     @apply backdrop-blur-xl border rounded-3xl;
     background: hsl(var(--glass-bg));
     border-color: hsl(var(--glass-border));
-    box-shadow: 0 8px 32px hsla(var(--aurora-primary) / 0.1),
-                inset 0 1px 0 hsla(240 20% 90% / 0.1);
+    box-shadow: 0 12px 40px hsla(var(--aurora-primary) / 0.15),
+                inset 0 1px 0 hsla(250 50% 90% / 0.1),
+                0 0 0 1px hsla(var(--aurora-primary) / 0.1);
   }
 
-  /* Glow Card */
+  /* Enhanced Glow Card with More Sophisticated Hover */
   .glow-card {
-    @apply glass-panel transition-all duration-300;
+    @apply glass-panel transition-all duration-500 cursor-pointer;
+    animation: aurora-float 8s ease-in-out infinite;
   }
   .glow-card:hover {
     box-shadow: var(--glow-primary), 
-                0 8px 32px hsla(var(--aurora-primary) / 0.2),
-                inset 0 1px 0 hsla(240 20% 90% / 0.15);
-    transform: translateY(-4px);
+                0 16px 50px hsla(var(--aurora-primary) / 0.3),
+                inset 0 1px 0 hsla(250 50% 90% / 0.2),
+                0 0 0 1px hsla(var(--aurora-primary) / 0.3);
+    transform: translateY(-8px) scale(1.02);
+    animation-play-state: paused;
   }
 
-  /* Gradient Text */
+  /* Enhanced Gradient Text with Multiple Variants */
   .text-gradient {
     background: var(--text-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
+    background-size: 300% 300%;
+    animation: gradient-shift 4s ease-in-out infinite;
   }
 
   .text-gradient-accent {
@@ -152,64 +164,174 @@ All colors MUST be HSL.
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite reverse;
+    background-size: 300% 300%;
+    animation: gradient-shift 4s ease-in-out infinite reverse;
   }
 
-  /* Button Variants */
+  .text-gradient-success {
+    background: var(--text-gradient-success);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient-shift 5s ease-in-out infinite;
+  }
+
+  .text-gradient-warm {
+    background: var(--text-gradient-warm);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+
+  /* Enhanced Button Variants */
   .btn-gradient {
-    @apply relative overflow-hidden rounded-2xl font-semibold transition-all duration-300;
-    background: linear-gradient(135deg, hsl(var(--aurora-primary)), hsl(var(--aurora-secondary)));
-    box-shadow: 0 4px 20px hsla(var(--aurora-primary) / 0.3);
+    @apply relative overflow-hidden rounded-2xl font-semibold transition-all duration-500;
+    background: linear-gradient(135deg, hsl(var(--aurora-primary)), hsl(var(--aurora-secondary)), hsl(var(--aurora-emerald)));
+    background-size: 200% 200%;
+    box-shadow: 0 8px 30px hsla(var(--aurora-primary) / 0.4);
+    animation: gradient-shift 3s ease-in-out infinite;
   }
   .btn-gradient:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: var(--glow-hover);
+    animation-play-state: paused;
+  }
+  .btn-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsla(255 255 255 / 0.2), transparent);
+    transition: left 0.5s;
+  }
+  .btn-gradient:hover::before {
+    left: 100%;
   }
 
   .btn-outline {
-    @apply glass-panel font-semibold transition-all duration-300;
+    @apply glass-panel font-semibold transition-all duration-500 relative overflow-hidden;
     background: transparent;
   }
   .btn-outline:hover {
-    background: hsla(var(--aurora-primary) / 0.1);
+    background: hsla(var(--aurora-primary) / 0.15);
     border-color: hsl(var(--aurora-primary));
     box-shadow: var(--glow-primary);
+    transform: translateY(-2px);
+  }
+  .btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsla(var(--aurora-primary) / 0.1), transparent);
+    transition: left 0.6s;
+  }
+  .btn-outline:hover::before {
+    left: 100%;
   }
 
-  /* Chip Component */
+  /* Enhanced Chip Component */
   .chip {
-    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-200;
-    background: hsla(var(--aurora-primary) / 0.1);
-    border: 1px solid hsla(var(--aurora-primary) / 0.2);
+    @apply inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(135deg, hsla(var(--aurora-primary) / 0.1), hsla(var(--aurora-secondary) / 0.1));
+    border: 1px solid hsla(var(--aurora-primary) / 0.3);
     color: hsl(var(--aurora-primary));
   }
   .chip:hover {
-    background: hsla(var(--aurora-primary) / 0.2);
+    background: linear-gradient(135deg, hsla(var(--aurora-primary) / 0.2), hsla(var(--aurora-secondary) / 0.2));
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px hsla(var(--aurora-primary) / 0.3);
+  }
+
+  /* Enhanced Form Inputs */
+  .input-glass {
+    @apply glass-panel px-6 py-4 w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-all duration-300;
+    border: 2px solid transparent;
+  }
+  .input-glass:focus {
+    border-color: hsl(var(--aurora-primary));
+    box-shadow: var(--glow-primary);
     transform: translateY(-1px);
   }
 
-  /* Form Inputs */
-  .input-glass {
-    @apply glass-panel px-4 py-3 w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-200;
+  /* New Professional Elements */
+  .initiative-card {
+    @apply glow-card p-8;
+    background: linear-gradient(135deg, hsla(var(--aurora-primary) / 0.1), hsla(var(--aurora-secondary) / 0.05));
+  }
+  .initiative-card:hover {
+    background: linear-gradient(135deg, hsla(var(--aurora-primary) / 0.15), hsla(var(--aurora-secondary) / 0.1));
+  }
+
+  .professional-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm;
+    background: linear-gradient(135deg, hsl(var(--aurora-emerald)), hsl(var(--aurora-tertiary)));
+    color: white;
+    box-shadow: 0 4px 20px hsla(var(--aurora-emerald) / 0.3);
+    animation: scale-pulse 3s ease-in-out infinite;
+  }
+
+  .shimmer-text {
+    @apply relative overflow-hidden;
+  }
+  .shimmer-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsla(255 255 255 / 0.3), transparent);
+    animation: shimmer 2s ease-in-out infinite;
   }
 }
 
 @layer utilities {
-  /* Animation keyframes */
+  /* Enhanced Animation keyframes */
   @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 50%; }
   }
 
   @keyframes aurora-float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(1deg); }
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+    33% { transform: translateY(-15px) rotate(1deg) scale(1.02); }
+    66% { transform: translateY(-8px) rotate(-0.5deg) scale(0.98); }
   }
 
   @keyframes glow-pulse {
     0%, 100% { box-shadow: var(--glow-primary); }
     50% { box-shadow: var(--glow-hover); }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes scale-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
   }
 
   /* RTL Support */

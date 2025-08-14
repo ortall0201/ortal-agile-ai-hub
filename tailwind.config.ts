@@ -89,9 +89,15 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
-				'aurora-float': 'aurora-float 6s ease-in-out infinite',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite'
+				'gradient-shift': 'gradient-shift 4s ease-in-out infinite',
+				'aurora-float': 'aurora-float 8s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'shimmer': 'shimmer 2s ease-in-out infinite',
+				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 20s linear infinite',
+				'scale-pulse': 'scale-pulse 3s ease-in-out infinite',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-up': 'slide-up 0.8s ease-out'
 			},
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif']
