@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SectionTitle } from "@/components/ui/section-title";
 import { GlowCard } from "@/components/ui/glow-card";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { Mail, Linkedin, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, Linkedin, Send, CheckCircle, AlertCircle, BarChart3 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
@@ -189,6 +189,22 @@ export const Contact = () => {
                       Connect on LinkedIn
                     </p>
                     <p className="text-muted-foreground text-sm">Professional networking</p>
+                  </div>
+                </motion.a>
+                
+                <motion.a
+                  href="https://public.tableau.com/app/profile/ortal.lasry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-200 group"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <BarChart3 className="text-secondary" size={24} />
+                  <div>
+                    <p className="font-semibold text-foreground group-hover:text-secondary transition-colors">
+                      Tableau Public
+                    </p>
+                    <p className="text-muted-foreground text-sm">Data visualizations & dashboards</p>
                   </div>
                 </motion.a>
               </div>
