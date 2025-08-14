@@ -5,19 +5,19 @@ export const Skills = () => {
   const skillCategories = [
     {
       title: "Agile & PM",
-      skills: ["Scrum", "Kanban", "JIRA", "Confluence", "Risk Management", "Stakeholder Management"]
+      skills: ["Scrum", "Kanban", "JIRA", "Risk Management", "Stakeholder Management", "Monday", "Notion", "Trello"]
     },
     {
       title: "AI & Development",
-      skills: ["LLM Integration", "Python", "API Development", "Machine Learning", "Data Analysis", "Automation"]
+      skills: ["LLM Integration", "Python", "API Development", "Machine Learning", "Data Analysis", "Automation", "Data Science", "Zapier", "Claude Code", "GPT", "FastAPI"]
     },
     {
       title: "Operations",
-      skills: ["Docker", "CI/CD", "Cloud Platforms", "DevOps", "Monitoring", "Security"]
+      skills: ["Docker", "CI/CD", "Cloud Platforms", "Monitoring"]
     },
     {
       title: "Tools & Platforms",
-      skills: ["GitHub", "Azure", "Notion", "Slack", "Figma", "Analytics"]
+      skills: ["GitHub", "Slack", "Analytics", "GCP", "Tableau"]
     }
   ];
 
