@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react";
 
 export const About = () => {
   const highlights = [
-    "Led 10+ MVP projects from concept to production",
+    "led MVP projects from concept to production and beyond",
     "Expert in Agile methodologies and cross-functional team leadership",
     "Specialized in AI/GenAI integration and automation workflows",
     "Proven track record in data-driven decision making"
