@@ -6,28 +6,28 @@ import { Calendar, ExternalLink, ArrowRight } from "lucide-react";
 export const Blog = () => {
   const posts = [
     {
-      title: "Building AI-First Project Management Workflows",
-      excerpt: "How integrating AI tools into Agile methodologies can accelerate delivery and improve team productivity.",
+      title: "אמדוקס מקימה חטיבת AI חדשה - צפויה לפטר מאות",
+      excerpt: "המעבר לאוטומציה באמדוקס מדגים את השינוי המהיר בתעשיית הטכנולוגיה. כיצד ארגונים יכולים להתכונן לעתיד של AI תוך שמירה על הון האנושי?",
+      date: "ינואר 2025",
+      readTime: "4 דקות קריאה",
+      category: "AI Strategy",
+      link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_%D7%90%D7%9E%D7%93%D7%95%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%9E%D7%94-%D7%97%D7%98%D7%99%D7%91%D7%AA-ai-%D7%97%D7%93%D7%A9%D7%94-%D7%95%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A4%D7%98%D7%A8-%D7%9E%D7%90%D7%95%D7%AA-activity-7361377935032745984-q8ms"
+    },
+    {
+      title: "Implementing Agile AI: Beyond Traditional Project Management",
+      excerpt: "Real-world strategies for integrating AI development into Agile frameworks, ensuring rapid iteration while maintaining quality and ethical standards.",
       date: "December 2024",
-      readTime: "5 min read",
-      category: "AI & Project Management",
+      readTime: "6 min read",
+      category: "Agile & AI",
       link: "#"
     },
     {
-      title: "From POC to Production: Scaling AI Projects",
-      excerpt: "A practical guide to successfully transitioning AI proof-of-concepts into production-ready solutions.",
+      title: "MVP to Market: Scaling AI Solutions",
+      excerpt: "Lessons learned from leading technical teams through AI project lifecycle - from proof of concept to production deployment at enterprise scale.",
       date: "November 2024",
-      readTime: "7 min read",
-      category: "AI Development",
+      readTime: "5 min read",
+      category: "Product Management",
       link: "#"
-    },
-    {
-      title: "Documentation Translation Made Simple",
-      excerpt: "Introducing docs-translator: an open-source tool for automating multilingual documentation workflows.",
-      date: "October 2024",
-      readTime: "4 min read",
-      category: "Open Source",
-      link: "https://docs-translator.onrender.com/"
     }
   ];
 
