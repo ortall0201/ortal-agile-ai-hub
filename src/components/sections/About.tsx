@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SectionTitle } from "@/components/ui/section-title";
 import { GlowCard } from "@/components/ui/glow-card";
 import { CheckCircle } from "lucide-react";
-import aiRobotImage from "@/assets/ai-robot.png";
+import aiRobotImage from "@/assets/ai-robot-advanced.png";
 
 export const About = () => {
   const highlights = [
@@ -18,10 +18,10 @@ export const About = () => {
         <div className="relative mb-16">
           <SectionTitle>About Me</SectionTitle>
           {/* AI Robot near title */}
-          <div className="absolute top-2 right-4 w-16 h-16 ai-robot">
+          <div className="absolute top-0 -right-2 w-24 h-24 ai-robot">
             <img 
               src={aiRobotImage} 
-              alt="AI Robot" 
+              alt="Advanced AI Robot" 
               className="w-full h-full object-contain"
             />
           </div>
