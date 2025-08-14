@@ -15,7 +15,7 @@ export const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold text-gradient mb-4">Ortal Lasry</h3>
+            <h3 className="text-xl font-bold text-gradient mb-4">אורטל לסרי</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               מנהלת פרויקטים טכנית המתמחה במתודולוגיות Agile ופתרונות מונחי AI. 
               מגשרת בין חדשנות לביצוע.

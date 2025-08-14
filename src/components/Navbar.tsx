@@ -42,7 +42,7 @@ export const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             whileHover={{ scale: 1.05 }}
           >
-            Ortal Lasry
+            אורטל לסרי
           </motion.a>
 
           {/* Desktop Navigation */}
