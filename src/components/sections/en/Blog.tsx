@@ -6,7 +6,7 @@ import { Calendar, ExternalLink, ArrowRight } from "lucide-react";
 export const Blog = () => {
   const posts = [
     {
-      title: "AI Implementer - Increasing DEV productivity using AI",
+      title: "AI Implementer - Increasing Developer Productivity Using AI",
       excerpt: "The transition to automation demonstrates the rapid change in the technology industry. How can organizations prepare for the AI future while preserving human capital and maximizing developer productivity?",
       date: "January 2025",
       readTime: "4 min read",
@@ -14,20 +14,20 @@ export const Blog = () => {
       link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_%D7%90%D7%9E%D7%93%D7%95%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%9E%D7%94-%D7%97%D7%98%D7%99%D7%91%D7%AA-ai-%D7%97%D7%93%D7%A9%D7%94-%D7%95%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A4%D7%98%D7%A8-%D7%9E%D7%90%D7%95%D7%AA-activity-7361377935032745984-q8ms?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvZ_YsB1emDVodDot_p58xC2mKHxpGR46o"
     },
     {
-      title: "Implementing Agile AI: Beyond Traditional Project Management",
-      excerpt: "Real-world strategies for integrating AI development into Agile frameworks, ensuring rapid iteration while maintaining quality and ethical standards.",
+      title: "Developer Trigger Warning - How I Built an App in One Day Using Claude Code and Introduced a New Container Management Platform",
+      excerpt: "A quick story about how I managed to build a complete platform for managing Docker containers in just one day, using advanced AI tools and innovative development methods.",
       date: "December 2024",
-      readTime: "6 min read",
-      category: "Agile & AI",
-      link: "#"
+      readTime: "5 min read",
+      category: "DevOps & Cloud",
+      link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_run-my-docker-activity-7360326837815652352-EEyY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvZ_YsB1emDVodDot_p58xC2mKHxpGR46o"
     },
     {
-      title: "MVP to Market: Scaling AI Solutions",
-      excerpt: "Lessons learned from leading technical teams through AI project lifecycle - from proof of concept to production deployment at enterprise scale.",
+      title: "How I Managed a Remote Development Team Using Agile Methodology and Led from POC to MVP",
+      excerpt: "Completing the Omdena program for developing AI solutions for social purposes - from lab project to real solution that impacts communities worldwide.",
       date: "November 2024",
       readTime: "5 min read",
       category: "Product Management",
-      link: "#"
+      link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_omdena-certificate-of-completion-activity-7330220714601459714-Q_D3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvZ_YsB1emDVodDot_p58xC2mKHxpGR46o"
     }
   ];
 
