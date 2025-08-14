@@ -18,7 +18,7 @@ export const About = () => {
         <div className="relative mb-16">
           <SectionTitle>About Me</SectionTitle>
           {/* AI Robot near title */}
-          <div className="absolute -top-4 -right-8 w-20 h-20 ai-robot">
+          <div className="absolute top-2 right-4 w-16 h-16 ai-robot">
             <img 
               src={aiRobotImage} 
               alt="AI Robot" 
