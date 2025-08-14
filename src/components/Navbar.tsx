@@ -79,7 +79,7 @@ export const Navbar = () => {
               title={isHebrew ? "Switch to English" : "עבור לעברית"}
             >
               <Globe size={16} />
-              <span className="text-xs font-medium">{language.toUpperCase()}</span>
+              <span className="text-xs font-medium">{isHebrew ? 'EN' : 'HE'}</span>
             </motion.button>
 
             {/* Theme Toggle */}
