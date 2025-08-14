@@ -9,24 +9,27 @@ import { Skills } from "@/components/sections/Skills";
 
 import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
+import { PageTransition } from "@/components/PageTransition";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Projects />
-        <CaseStudies />
-        <Skills />
-        
-        <Blog />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <PageTransition direction="rtl">
+      <div className="min-h-screen">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Services />
+          <Projects />
+          <CaseStudies />
+          <Skills />
+          
+          <Blog />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

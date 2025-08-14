@@ -8,23 +8,26 @@ import { CaseStudies } from "@/components/sections/en/CaseStudies";
 import { Skills } from "@/components/sections/en/Skills";
 import { Blog } from "@/components/sections/en/Blog";
 import { Contact } from "@/components/sections/en/Contact";
+import { PageTransition } from "@/components/PageTransition";
 
 const English = () => {
   return (
-    <div className="min-h-screen">
-      <NavbarEn />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Projects />
-        <CaseStudies />
-        <Skills />
-        <Blog />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <PageTransition direction="ltr">
+      <div className="min-h-screen">
+        <NavbarEn />
+        <main>
+          <Hero />
+          <About />
+          <Services />
+          <Projects />
+          <CaseStudies />
+          <Skills />
+          <Blog />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useDarkMode } from "@/hooks/use-dark-mode";
-import { Moon, Sun, Menu, X, Globe } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { LanguageTransition } from "@/components/LanguageTransition";
 
 export const NavbarEn = () => {
   const { isDark, toggle } = useDarkMode();
@@ -61,16 +62,11 @@ export const NavbarEn = () => {
           {/* Controls */}
           <div className="flex items-center gap-4">
             {/* Language Toggle */}
-            <motion.a
+            <LanguageTransition
               href="/"
-              className="p-2 rounded-xl bg-secondary/50 text-foreground hover:bg-secondary transition-colors duration-200 flex items-center gap-1"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              label="HE"
               title="עבור לעברית"
-            >
-              <Globe size={16} />
-              <span className="text-xs font-medium">HE</span>
-            </motion.a>
+            />
 
             {/* Theme Toggle */}
             <motion.button
