@@ -138,7 +138,6 @@ All colors MUST be HSL.
   /* Enhanced Glow Card with More Sophisticated Hover */
   .glow-card {
     @apply glass-panel transition-all duration-500 cursor-pointer;
-    animation: aurora-float 8s ease-in-out infinite;
   }
   .glow-card:hover {
     box-shadow: var(--glow-primary), 
@@ -146,7 +145,6 @@ All colors MUST be HSL.
                 inset 0 1px 0 hsla(250 50% 90% / 0.2),
                 0 0 0 1px hsla(var(--aurora-primary) / 0.3);
     transform: translateY(-8px) scale(1.02);
-    animation-play-state: paused;
   }
 
   /* Enhanced Gradient Text with Multiple Variants */
@@ -261,13 +259,23 @@ All colors MUST be HSL.
     transform: translateY(-1px);
   }
 
-  /* New Professional Elements */
-  .initiative-card {
-    @apply glow-card p-8;
-    background: linear-gradient(135deg, hsla(var(--aurora-primary) / 0.1), hsla(var(--aurora-secondary) / 0.05));
+  /* About Section Specific Animations */
+  .about-floating-card {
+    @apply glow-card;
+    animation: aurora-float 8s ease-in-out infinite;
   }
-  .initiative-card:hover {
-    background: linear-gradient(135deg, hsla(var(--aurora-primary) / 0.15), hsla(var(--aurora-secondary) / 0.1));
+  .about-floating-card:hover {
+    animation-play-state: paused;
+  }
+
+  /* AI Robot Animation */
+  .ai-robot {
+    animation: bounce-subtle 3s ease-in-out infinite, rotate-slow 20s linear infinite;
+    filter: drop-shadow(0 0 20px hsla(var(--aurora-tertiary) / 0.6));
+  }
+  .ai-robot:hover {
+    animation: bounce-subtle 1s ease-in-out infinite, rotate-slow 5s linear infinite;
+    filter: drop-shadow(0 0 30px hsla(var(--aurora-tertiary) / 0.8));
   }
 
   .professional-badge {

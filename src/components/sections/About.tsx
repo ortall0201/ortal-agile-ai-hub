@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { SectionTitle } from "@/components/ui/section-title";
 import { GlowCard } from "@/components/ui/glow-card";
 import { CheckCircle } from "lucide-react";
+import aiRobotImage from "@/assets/ai-robot.png";
 
 export const About = () => {
   const highlights = [
@@ -50,22 +51,33 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <GlowCard className="text-center">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">5+ Years</h3>
-                  <p className="text-muted-foreground">Project Management Experience</p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">15+ Projects</h3>
-                  <p className="text-muted-foreground">Successfully Delivered</p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gradient-accent mb-2">AI-First</h3>
-                  <p className="text-muted-foreground">Approach to Innovation</p>
-                </div>
+            <div className="relative">
+              {/* AI Robot */}
+              <div className="absolute -top-8 -right-8 w-24 h-24 ai-robot">
+                <img 
+                  src={aiRobotImage} 
+                  alt="AI Robot" 
+                  className="w-full h-full object-contain"
+                />
               </div>
-            </GlowCard>
+              
+              <GlowCard className="text-center about-floating-card">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gradient-accent mb-2">5+ Years</h3>
+                    <p className="text-muted-foreground">Project Management Experience</p>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gradient-accent mb-2">15+ Projects</h3>
+                    <p className="text-muted-foreground">Successfully Delivered</p>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gradient-accent mb-2">AI-First</h3>
+                    <p className="text-muted-foreground">Approach to Innovation</p>
+                  </div>
+                </div>
+              </GlowCard>
+            </div>
           </motion.div>
         </div>
       </div>
