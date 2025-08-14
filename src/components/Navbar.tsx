@@ -34,7 +34,6 @@ export const Navbar = () => {
     }
     setIsMenuOpen(false);
   };
-
   return (
     <motion.nav
       className="fixed top-0 left-0 right-0 z-50 glass-panel mx-4 mt-4 rounded-2xl"
@@ -80,7 +79,7 @@ export const Navbar = () => {
               title={isHebrew ? "Switch to English" : "עבור לעברית"}
             >
               <Globe size={16} />
-              <span className="text-xs font-medium">{language.toUpperCase()}</span>
+              <span className="text-xs font-medium">{isHebrew ? 'EN' : 'HE'}</span>
             </motion.button>
 
             {/* Theme Toggle */}
