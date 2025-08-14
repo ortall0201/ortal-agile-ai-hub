@@ -44,10 +44,17 @@ export const Projects = () => {
       category: "AI/LLM",
       tags: ["Translation", "AI", "Documentation"],
       link: "https://docs-translator.onrender.com/"
+    },
+    {
+      name: "Data Analysis",
+      description: "Tableau Public dashboards and data analytics - interactive business insights and data stories",
+      category: "Data",
+      tags: ["Tableau", "Analytics", "Visualization", "Business Intelligence"],
+      link: "https://public.tableau.com/app/profile/ortal.lasry/vizzes"
     }
   ];
 
-  const filters = ["All", "AI/LLM", "Project", "Ops"];
+  const filters = ["All", "AI/LLM", "Project", "Ops", "Data"];
 
   const filteredProjects = projects.filter(project => {
     const matchesFilter = filter === "All" || project.category === filter;

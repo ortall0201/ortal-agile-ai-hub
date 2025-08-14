@@ -44,10 +44,17 @@ export const Projects = () => {
       category: "AI/LLM",
       tags: ["Translation", "AI", "Documentation"],
       link: "https://docs-translator.onrender.com/"
+    },
+    {
+      name: "Data Analysis",
+      description: "דשבורדים ואנליטיקות דאטה ב-Tableau Public - תובנות עסקיות וסיפורי דאטה אינטראקטיביים",
+      category: "דאטה",
+      tags: ["Tableau", "Analytics", "Visualization", "Business Intelligence"],
+      link: "https://public.tableau.com/app/profile/ortal.lasry/vizzes"
     }
   ];
 
-  const filters = ["הכל", "AI/LLM", "פרויקט", "תפעול"];
+  const filters = ["הכל", "AI/LLM", "פרויקט", "תפעול", "דאטה"];
 
   const filteredProjects = projects.filter(project => {
     const matchesFilter = filter === "הכל" || project.category === filter;
