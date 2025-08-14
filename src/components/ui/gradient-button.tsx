@@ -32,23 +32,31 @@ export const GradientButton = ({
     className
   );
 
-  const Component = motion.div;
+  if (href) {
+    return (
+      <motion.a
+        href={href}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        className={baseClasses}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
+        {children}
+      </motion.a>
+    );
+  }
 
   return (
-    <Component
+    <motion.div
       className={baseClasses}
       onClick={onClick}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
-      {...(href && {
-        as: "a",
-        href,
-        target: href.startsWith("http") ? "_blank" : undefined,
-        rel: href.startsWith("http") ? "noopener noreferrer" : undefined
-      })}
     >
       {children}
-    </Component>
+    </motion.div>
   );
 };
