@@ -270,11 +270,11 @@ All colors MUST be HSL.
 
   /* AI Robot Animation */
   .ai-robot {
-    animation: bounce-subtle 3s ease-in-out infinite, rotate-slow 20s linear infinite;
+    animation: bounce-subtle 3s ease-in-out infinite;
     filter: drop-shadow(0 0 20px hsla(var(--aurora-tertiary) / 0.6));
   }
   .ai-robot:hover {
-    animation: bounce-subtle 1s ease-in-out infinite, rotate-slow 5s linear infinite;
+    animation: bounce-subtle 1s ease-in-out infinite;
     filter: drop-shadow(0 0 30px hsla(var(--aurora-tertiary) / 0.8));
   }
 
