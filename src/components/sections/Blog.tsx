@@ -22,7 +22,7 @@ export const Blog = () => {
       link: "https://www.linkedin.com/posts/ortal-lasry-3232252b6_run-my-docker-activity-7360326837815652352-EEyY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvZ_YsB1emDVodDot_p58xC2mKHxpGR46o"
     },
     {
-      title: "מ-MVP לשוק: הרחבת פתרונות AI",
+      title: "כיצד ניהלתי צוות פיתוח ב remote בשיטה אג'ילית והובלתי מ POC ל MVP",
       excerpt: "השלמת תוכנית Omdena לפיתוח פתרונות AI למטרות חברתיות - מפרויקט לאב לפתרון אמיתי שמשפיע על קהילות ברחבי העולם.",
       date: "נובמבר 2024",
       readTime: "5 דקות קריאה",
